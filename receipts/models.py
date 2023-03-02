@@ -22,6 +22,9 @@ class Account(models.Model):
         on_delete=models.CASCADE,
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Receipt(models.Model):
     vendor = models.CharField(max_length=200)
@@ -36,9 +39,8 @@ class Receipt(models.Model):
     category = models.ForeignKey(
         "ExpenseCategory",
         related_name="receipts",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
     )
-
     account = models.ForeignKey(
         "Account",
         related_name="receipts",

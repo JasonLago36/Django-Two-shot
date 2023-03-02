@@ -6,20 +6,14 @@ from .models import ExpenseCategory, Account, Receipt
 
 @admin.register(ExpenseCategory)
 class ExpenseCategoryAdmin(admin.ModelAdmin):
-    list_display = (
-
-    )
+    pass
 
 
 @admin.register(Account)
 class AccountAdmin(admin.ModelAdmin):
-    list_display = (
-
-    )
+    pass
 
 
 @admin.register(Receipt)
 class ReceiptAdmin(admin.ModelAdmin):
-    list_display = (
-
-    )
+    pass
